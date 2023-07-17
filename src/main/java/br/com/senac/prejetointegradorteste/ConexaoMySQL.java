@@ -12,11 +12,11 @@ public class ConexaoMySQL {
     public static Connection getConexaoMySQL() {
         Connection connection = null;
         try {
-            String driverName = "com.mysql.jdbc.Driver";
+            String driverName = "com.mysql.cj.jdbc.Driver";
             Class.forName(driverName);
             String serverName = "localhost";
             String mydatabase = "senac_projeto";
-            String url = "jdbc:mysql://" + serverName + "/" + mydatabase;
+            String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?serverTimezone=America/Brasília";
             String username = "root";
             String password = "root";
             connection = DriverManager.getConnection(url, username, password);
@@ -49,13 +49,13 @@ public class ConexaoMySQL {
 
         try {
             stmt = conexao.createStatement();
-            String sql = "SELECT materia, formula FROM nome_da_tabela";
+            String sql = "SELECT materia, formula FROM materia_formula";
             rs = stmt.executeQuery(sql);
 
             while (rs.next()) {
                 String materia = rs.getString("materia");
                 String formula = rs.getString("formula");
-                System.out.println("Matéria: " + materia + ", Fórmula: " + formula);
+                System.out.println("Materia: " + materia + ", Formula: " + formula);
             }
         } catch (SQLException e) {
             e.printStackTrace();
