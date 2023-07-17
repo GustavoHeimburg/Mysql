@@ -24,7 +24,7 @@ public class ConexaoMySQL {
             if (connection != null) {
                 status = ("STATUS--->Conectado com sucesso!");
             } else {
-                status = ("STATUS--->Não foi possivel realizar conexão");
+                status = ("STATUS--->Não foi possivel realizar a conexão");
             }
 
             return connection;
