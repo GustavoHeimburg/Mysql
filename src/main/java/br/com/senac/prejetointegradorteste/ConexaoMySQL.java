@@ -14,7 +14,7 @@ public class ConexaoMySQL {
         try {
             String driverName = "com.mysql.cj.jdbc.Driver";
             Class.forName(driverName);
-            String serverName = "localhost";
+            String serverName = "jdbc.mysql://localhost:3306";
             String mydatabase = "senac_projeto";
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?serverTimezone=America/Brasília";
             String username = "root";
