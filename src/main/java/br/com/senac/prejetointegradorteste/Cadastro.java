@@ -14,7 +14,7 @@ public class Cadastro {
     }
 
     public String getNome() {
-        return nome;
+        return null;
     }
 
     public void setNome(String nome) {
