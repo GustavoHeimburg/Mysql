@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ConexaoMySQL {
+public class ConexaoMYSQL {
     public static String status = "Não conectou...";
 
     public static Connection getConexaoMySQL() {
@@ -14,12 +14,10 @@ public class ConexaoMySQL {
         try {
             String driverName = "com.mysql.cj.jdbc.Driver";
             Class.forName(driverName);
-            String serverName = "jdbc.mysql://localhost:3306";
+            String serverName = "jdbc.mysql://localhost:3306/senac_projeto?usuario=root&senha=";
             String mydatabase = "senac_projeto";
             String url = "jdbc:mysql://" + serverName + "/" + mydatabase + "?serverTimezone=America/Brasília";
-            String username = "root";
-            String password = "root";
-            connection = DriverManager.getConnection(url, username, password);
+            connection = DriverManager.getConnection(url);
 
             if (connection != null) {
                 status = ("STATUS--->Conectado com sucesso!");
@@ -38,7 +36,7 @@ public class ConexaoMySQL {
     }
 
     public static void main(String[] args) {
-        Connection conexao = ConexaoMySQL.getConexaoMySQL();
+        Connection conexao = ConexaoMYSQL.getConexaoMySQL();
         if (conexao == null) {
             System.out.println("Não foi possível estabelecer uma conexão com o banco de dados.");
             return;
