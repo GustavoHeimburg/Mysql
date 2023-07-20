@@ -1,17 +1,15 @@
 package br.com.senac.prejetointegradorteste;
 
 public class Cadastro {
-    private String codigo;
+    private int codigo;
     private String nome;
     private String descricao;
 
-    public String getCodigo() {
-
+    public int getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
-
+    public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
