@@ -14,7 +14,7 @@ public class BDCSVService implements Calculos {
     private int ultimoCodigo;
     @Override
     public void salvarCalculo(Cadastro cadastro) {
-    cadastro.setCodigo(ultimoCodigo() + 1);
+    cadastro.setCodigo(ultimoCodigo + 1);
     }
 
     @Override
