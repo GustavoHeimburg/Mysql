@@ -1,9 +1,10 @@
 package br.com.senac.prejetointegradorteste;
 
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         Scanner ler = new Scanner(System.in);
         int confirma = 0;
 
