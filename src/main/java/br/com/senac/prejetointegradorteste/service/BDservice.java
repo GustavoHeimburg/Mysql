@@ -14,8 +14,8 @@ public class BDservice {
             conexao = DriverManager.getConnection("jdbc:mysql://localhost/senac_projeto", "root", "root");
             Statement stmt = conexao.createStatement();
 
-            String nome = "carlos";
-            String senha = "4469Ggs";
+            String nome = "";
+            String senha = "";
             String sql = "INSERT INTO usuarios (nome, senha) VALUES ('" + nome + "', '" + senha + "')";
             stmt.executeUpdate(sql);
 
