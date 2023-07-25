@@ -49,7 +49,6 @@ public class Classes {
         Scanner ler = new Scanner(System.in);
         int inicio = auxconta();
 
-        // Add these lines to connect to the database
         Connection conexao = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -62,7 +61,7 @@ public class Classes {
                 String senhaConta = criarSenhaConta();
                 System.out.println("Conta criada com sucesso! \nNome: " + nomeConta + "\nSenha: " + senhaConta);
 
-                // Add these lines to insert a new user into the database
+
                 String sql = "INSERT INTO usuarios (nome, senha) VALUES ('" + nomeConta + "', '" + senhaConta + "')";
                 stmt.executeUpdate(sql);
             } else if (inicio == 1) {
